@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .navbar{
+  /* border: 2px solid teal; */
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  width: 97%;
+  height: 60px;
+}
+
+.navbar-logo {
+  /* border: 2px solid red; */
+  display: flex;
+  /* gap: 25px; */
+
+  /* justify-content:space-between; */
+}
+.navbar-img {
+  /* border: 2px solid black; */
+  margin: 5px;
+  /* height: 50px; */
+  /* border: 2px solid green; */
+}
+.pincode {
+  display: flex;
+  margin: 30px;
+  margin-top: 5px;
+  /* border: 2px solid red; */
+  height: 50px;
+}
+.pincode p{
+  /* border: 2px solid blue; */
+  gap: 10px;
+  margin: 0px;
+}
+.navbar-left{
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 2px solid blue; */
+  margin: 5px;
+  width: 30%;
+  
+}
+.navbar-2{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.update{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  /* border: 2px solid red; */
+  margin-top: 20px;
+}
+
+.update p{
+  display: flex;
+  /* border: 2px solid red; */
+  width: 110%;
+  gap: 10px;
+}
+
+.big-search{
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.item{
+  display: flex;
+ width: 90%;
+ /* border: 2px solid red; */
+ height: 220px;
+ margin: 30px;
+ 
+}
+.item div{
+  /* border: 2px solid greenyellow; */
+  margin: 40px;
+ gap: 5px;
+  /* height: 40px;
+  width: 40px;  */
+}
+
+.item div img{
+  height: 80px;
+  /* border: 2px solid red; */
+}
+
+
+.arrow{
+    cursor: pointer;
+    position:absolute;
+    top: 45%;
+    color: black;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    /* border: 2px solid rgb(240, 13, 9); */
+     margin-left: 60px;  
+}
+.nxt{
+     right: 40px;
+}
+
+.pre{
+    left: 0px;
+}
+
+
+.small{
+  display: flex;
+  /* border: 2px solid rgb(240, 13, 9); */
+  
+}
+.small img{
+  height: 20px;
+  /* border: 2px solid rgb(9, 240, 63); */
+  margin:  10px;
+ 
+}
+.box-2{
+  
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  
+}
+
+.box-2 img{
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 20px;
+}
+.desc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+}
+.desc div{
+  margin: 20px;
+}
+
+button{
+  background-color: rgb(6, 172, 86);
+  color: white;
+  border-radius: 10px;
+}
+.desc li{
+  line-height: 50px;
+  line-break:anywhere;
+}
+.box-3{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.box-3 div{
+  margin: 10px;
+}
+
+.box-3 p{
+  text-align: center;
+  justify-content: center;
+}
+
+.box-3 img{
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 20px;
+}
+/* .box-3 h3{
+  text-align: center;
+  justify-content: center;
+} */
+
+.box-3 h4{
+  text-decoration: line-through;
+}
+.back{
+  display: flex;
+  background-color: rgb(113, 153, 234);
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.back div{
+  margin: 20px;
+ 
+}
+.box-4{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+}
+.box-4 div{
+  margin: 10px;
+}
+
+.box-4 h4{
+  text-decoration: line-through;
+}
+.box-4 img{
+  border: 2px solid red;
+  height: 100px;
+  margin-left: 200px;
+}
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <div class='navbar'>
+    <div class='navbar-logo'>
+      <div class='navbar-img'>
+        <img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" alt="" />
+        
+      </div>
+     
+      <div class='pincode'>
+      <div> 
+        <img src="https://assets.pharmeasy.in/apothecary/images/ic_express%20delivery.svg?dim=16x0" alt="" />
+      </div>
+      <div>
+      <p>express deliver to</p>
+      <p><b>select pincode </b> <select name="" id=""></select></p>
+      </div>
+     
+       </div>
+       
+    </div>
+    <div>
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="navbar-left">
+      <p><i class="fa-solid fa-download"></i>  Download App</p>
+      <p><i class="fa-regular fa-user"></i>  hello,    log in</p>
+      <p> <i class="fa-brands fa-docker"></i> offer  </p>
+      <p><i class="fa-solid fa-cart-shopping"></i> cart</p>
+      
+    </div>
+  </div>
+  <div class="navbar-2">
+    <p>Medicine</p>
+    <p>Lab Teste</p>
+    <p>Health Blog<select name="" id=""></select></p>
+    <p>Health Care</p>
+    <p>PLUS
+    </p>
+    <p>Offers</p>
+    <p>Value Store</p>
+  </div>
+
+
+  <div class="update">
+    <div><h2>What are you looking for?</h2></div>
+    <div>
+      <p>  <i class="fa-regular fa-file-lines"></i> Order with prescription. <b>UPLOAD NOW</b>    <i class="fa-solid fa-chevron-right"></i> </p>
+     
+    </div>
+  </div>
+
+
+  <div class="big-search">
+    <input type="text" placeholder="Search">
+  </div>
+
+
+  <div class="item">
+    <div>
+      <img src="https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0" alt="">
+      <h4>Medicine</h4>
+      <p>UPTO 27% OFF</p>
+    </div>
+    <div> <img src="https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0" alt="">
+      <h4>Lab Tests</h4>
+      <p>UPTO 70% OFF</p></div>
+    <div> <img src="https://assets.pharmeasy.in/apothecary/images/healthcare_ff.webp?dim=256x0" alt="">
+      <h4>Healthcare</h4>
+      <p>UPTO 60% OFF</p></div>
+     <div> <img src="https://assets.pharmeasy.in/apothecary/images/health_blogs_ff.webp?dim=256x0" alt="">
+      <h4>Health Blog</h4>
+      <p>SAVE 5% EXTRA </p></div>
+     
+    <div> <img src="https://assets.pharmeasy.in/apothecary/images/plus_ff.webp?dim=256x0" alt="">
+      <h4>PLUS</h4>
+      <p>SAVE 5% EXTRA </p></div>
+    <div> <img src="https://assets.pharmeasy.in/apothecary/images/offers_ff.webp?dim=256x0" alt="">
+      <h4>Offers</h4>
+      <p>UPTO 27% OFF</p></div>
+    <div> <img src="https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0" alt="">
+      <h4>Value Store</h4>
+      <p>UPTO 50% OFF</p>
+    </div> 
+  </div>
+
+
+
+  <div class="box-2">
+   <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/banner/banner/93a8cda02f6-Prebuzz-B.jpg" alt=""></div>
+   <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/banner/banner/3820fdf2bc7-25OFFER.jpg" alt=""></div>
+   <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/banner/banner/df4321df50a-211.jpg" alt=""></div>
+   <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/banner/banner/4d4f7e94057-NewSlipperLaunchHP.jpg" alt=""></div>
+   <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/banner/banner/480aa5499c8-flashhp.jpg" alt=""></div>
+
+    <span class="arrow pre" onclick="controller(-1)">&#10094;</span>
+    <span class="arrow nxt" onclick="controller(1)">&#10095;</span>
+ 
+  </div>
+  <!-- onclick="controller(-1)"
+  onclick="controller(1)" -->
+
+  <h3>Lab Tests by Health Concern</h3>
+  
+  <div class="small">
+    <p>Powered by</p>
+    <img src="https://assets.pharmeasy.in/apothecary/images/Thyrocare.webp?dim=1440x0" alt="">
+  </div>
+
+
+
+  
+
+
+  <div class="box-2">
+    <div  class="slide-1"><img src="" alt=""></div>
+    
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/e1a18d8deac-Vitamins.png?dim=256x0" alt=""></div>
+    
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/1e927857c26-Diabetes.png?dim=256x0" alt=""></div>
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/e1c60c444bf-Fever.png?dim=256x0" alt=""></div>
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/9696ef00b0a-lifestyle.png?dim=256x0" alt=""></div>
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/7b238cdbb60-womencare.png?dim=256x0" alt=""></div>
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/71fb3c06e71-Thyroid.png?dim=256x0" alt=""></div>
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/cd9606a9173-efr.png?dim=256x0" alt=""></div>
+
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/bca113a1b80-Bone.png?dim=256x0" alt=""></div>
+    <div  class="slide-1"><img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/520acd31898-heart.png?dim=256x0" alt=""></div>
+   
+ 
+    <span class="arrow pre">&#10094;</span>
+    <span class="arrow nxt">&#10095;</span>
+ 
+    
+   </div>
+   
+   
+   <div class="desc">
+    <div><img src="https://assets.pharmeasy.in/apothecary/images/rx_upload.svg?dim=1440x0" alt=""></div>
+    <div>
+      <h3>Order with Prescription</h3>
+      <p>Upload prescription and we will deliver your medicines</p>
+      <button><i class="fa-solid fa-file-export"></i>Upload</button>
+    </div>
+    <div>
+      <h4>How does this work?</h4>
+      <ol>
+        <li>Upload a photo of your prescription</li>
+        <li>Add delivery address and place the order</li>
+        <li>We will call you to confirm the medicines</li>
+        <li>Now, sit back! your medicines will get delivered at your doorstep</li>
+      </ol>
+    </div>
+    <div></div>
+   </div>
+
+   <h1>Shop by Categories</h1>
+
+   <div class="box-3">
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/f10917087a483040b557e4b18204312c.png?f=png?dim=256x0" alt="">
+      <p>Mother and Baby Care</p>
+    </div>
+    
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/fa936f30b4563fc4abd187fb22fe5258.png?f=png?dim=256x0" alt="">
+      <p>Top Products</p>
+    </div>
+    
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/1e622b0308ec3ab48887512eaa3488a5.png?f=png?dim=256x0" alt="">
+      <p>Elderly Care</p>
+    </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/9cc9a28ea4513009966cae794114eefd.png?f=png?dim=256x0" alt="">
+      <p>Personal Care</p>
+    </div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/335dae76832d370c94f0440f5ba89e1f.png?f=png?dim=256x0" alt=""><p>Healthcare Devices</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ce48d6d71ace3892945f0b0a64c1f0e9.png?f=png?dim=256x0" alt=""><p>Health Food and Drinks</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/11315fee93053980af48fd871bf687b8.png?f=png?dim=256x0" alt=""><p>Skin Care</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/4405b7900b0b34fcb5c8572aae9d4b2e.png?f=png?dim=256x0" alt=""><p>Mother and Baby Care</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/514d0d7d01a63502b4ebfec9ae26f4d2.png?f=png?dim=256x0" alt=""><p>Accessories & Wearables</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/af7a9b53ad1239659615c6895b0972d7.png?f=png?dim=256x0" alt=""><p>Fitness Supplements</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/105ceca515ee30509f93309ae75306aa.png?f=png?dim=256x0" alt=""><p>Ayurvedic Care</p></div>
+    <div  class="slide-1"><img src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/35d6d4e00e5d3058906cfa8b92ca799c.png?f=png?dim=256x0" alt=""><p>Diabetic Care</p></div>
+    <div  class="slide-1"><img src="" alt=""></div>
+    <div  class="slide-1"><img src="" alt=""></div>
+
+
+
+    <span class="arrow pre">&#10094;</span>
+    <span class="arrow nxt">&#10095;</span>
+ 
+    
+   </div>
+
+<h2>New Launches</h2>
+<p>New wellness range just for you!</p>
+
+<div class="box-3">
+  <div  class="slide-1">
+    <img src="https://cdn01.pharmeasy.in/dam/products_otc/Q84402/abzorb-total-skin-relief-dusting-powder-20-extra-bottle-of-120gm-2-1712152617.jpg?dim=1440x0" alt="">
+    <h3>Abzorb Total Skin Relief Dusting Powder...</h3>
+     <h4>MRP <span>₹160.00</span></h4>
+     <h5>₹150.40(6%)</h5>
+  </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/products_otc/V45485/pharmeasy-womens-diabetic-orthopedic-slippers-olive-green-size-uk-6-6.1-1709288022.jpg?dim=1440x0" alt="">
+      <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+      <h4>MRP <span>₹1049.00</span></h4>
+      <h5>₹545.48 (48%) </h5>
+    </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/products_otc/U16920/baidyanath-nagpur-ashwagandha-tablet-60-tablets-immunity-and-strength-2-1677243413.jpg?dim=1440x0" alt="">
+      <h3>Baidyanath Nagpur Ashwagandha Tablet...</h3>
+      <h4>MRP <span>₹1049.00</span></h4>
+      <h5>₹178.20 (1%)</h5>
+    </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/products_otc/Y46579/baidyanath-nagpur-vita-ex-gold-strength-stamina-for-men-20-capsules-2-1671744946.jpg?dim=1440x0" alt="">
+      <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+      <h4>MRP <span>₹1049.00</span></h4>
+      <h5>₹545.48 (48%) </h5>
+    </div>
+      <div  class="slide-1">
+        <img src="https://cdn01.pharmeasy.in/dam/products_otc/F46480/diataal-d-multivitamin-with-vitamin-d-for-heart-health-strong-bones-immunity-health-30-capsules-2-1705912936.jpg?dim=1440x0" alt="">
+        <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+        <h4>MRP <span>₹1049.00</span></h4>
+        <h5>₹545.48 (48%) </h5>
+      </div>
+      <div  class="slide-1">
+        <img src="https://cdn01.pharmeasy.in/dam/products_otc/A28033/diataal-nutripop-multivitamin-hair-skin-energy-immunity-for-fitness-wellness-45-capsules-2-1705913044.jpg?dim=1440x0" alt="">
+        <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+        <h4>MRP <span>₹1049.00</span></h4>
+        <h5>₹545.48 (48%) </h5>
+      </div>
+
+
+
+
+    <span class="arrow pre">&#10094;</span>
+    <span class="arrow nxt">&#10095;</span>
+ 
+</div>
+
+
+
+<h2>Trending Near You</h2>
+<p>Popular in your city</p>
+
+<div class="box-3">
+  <div  class="slide-1">
+    <img src="https://cdn01.pharmeasy.in/dam/products_otc/T22634/liveasy-wellness-calcium-magnesium-vitamin-d3-zinc-bones-dental-health-bottle-60-tabs-2-1661760061.jpg?dim=1440x0" alt="">
+    <h3>Liveasy Wellness Calcium Magnesium...</h3>
+     <h4>MRP ₹599.00</h4>
+     <h5>₹347.42 (42%)</h5>
+  </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-2-1698385993.jpg?dim=1440x0" alt="">
+      <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+      <h4>MRP <span>₹1049.00</span></h4>
+      <h5>₹545.48 (48%) </h5>
+    </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/products_otc/159115/shelcal-500mg-strip-of-15-tablets-2-1679999355.jpg?dim=1440x0" alt="">
+      <h3>Baidyanath Nagpur Ashwagandha Tablet...</h3>
+      <h4>MRP <span>₹1049.00</span></h4>
+      <h5>₹178.20 (1%)</h5>
+    </div>
+    <div  class="slide-1">
+      <img src="https://cdn01.pharmeasy.in/dam/products_otc/D52223/liveasy-foods-healthy-roasted-seed-mix-blend-of-6-fibre-rich-healthy-roasted-seeds-200-gms-2-1656420865.jpg?dim=1440x0" alt="">
+      <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+      <h4>MRP <span>₹1049.00</span></h4>
+      <h5>₹545.48 (48%) </h5>
+    </div>
+      <div  class="slide-1">
+        <img src="https://cdn01.pharmeasy.in/dam/products_otc/F46480/diataal-d-multivitamin-with-vitamin-d-for-heart-health-strong-bones-immunity-health-30-capsules-2-1705912936.jpg?dim=1440x0" alt="">
+        <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+        <h4>MRP <span>₹1049.00</span></h4>
+        <h5>₹545.48 (48%) </h5>
+      </div>
+      <div  class="slide-1">
+        <img src="https://cdn01.pharmeasy.in/dam/products_otc/A28033/diataal-nutripop-multivitamin-hair-skin-energy-immunity-for-fitness-wellness-45-capsules-2-1705913044.jpg?dim=1440x0" alt="">
+        <h3>Pharmeasy Women'S Diabetic & Orthopedic...</h3>
+        <h4>MRP <span>₹1049.00</span></h4>
+        <h5>₹545.48 (48%) </h5>
+      </div>
+
+
+    <span class="arrow pre">&#10094;</span>
+    <span class="arrow nxt">&#10095;</span>
+ 
+</div>
+ 
+
+<div class="back">
+    <div>
+      <h2>Become a + membership</h2>
+      <p>and enjoy extra bachat on every day</p>
+    </div>
+    <div>
+      <p>Save 5% on Medicine,50% on first lab Test & get free delivery with PLUS membership know more </p>
+      <button>Explore Now</button>
+    </div>
+    <div>
+      <img src="https://assets.pharmeasy.in/apothecary/_next/static/media/PlusFamily.22677720.png?dim=1440x0" alt="">
+    </div>
+  </div>
+
+  <h1>Frequently Booked Lab Tests</h1>
+  <div class="box-4">
+    <div>
+      <button>61% off</button>
+      <h2>Comprehensive Full Body Checkup Test With Vitamin D & B12</h2>
+      <p>Measures Vitamin D and B12 levels and others essential parameter</p>
+      <h4>₹4,899 </h4>
+      <h5>₹1,899</h5>
+      <div> <img src="https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/c4162b4ec00938379d15b2719577457e.png?dim=96x0" alt=""></div>
+     
+    </div>
+    <div>
+      <button>61% off</button>
+      <h2>Comprehensive Full Body Checkup Test With Vitamin D & B12</h2>
+      <p>Measures Vitamin D and B12 levels and others essential parameter</p>
+      <h4>₹4,899 </h4>
+      <h5>₹1,899</h5>
+      <img src="https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/c4162b4ec00938379d15b2719577457e.png?dim=96x0" alt="">
+    </div>
+    <div>
+      <button>61% off</button>
+      <h2>Comprehensive Full Body Checkup Test With Vitamin D & B12</h2>
+      <p>Measures Vitamin D and B12 levels and others essential parameter</p>
+      <h4>₹4,899 </h4>
+      <h5>₹1,899</h5>
+      <img src="https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/c4162b4ec00938379d15b2719577457e.png?dim=96x0" alt="">
+    </div>
+    <div>
+      <button>61% off</button>
+      <h2>Comprehensive Full Body Checkup Test With Vitamin D & B12</h2>
+      <p>Measures Vitamin D and B12 levels and others essential parameter</p>
+      <h4>₹4,899 </h4>
+      <h5>₹1,899</h5>
+      <img src="https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/c4162b4ec00938379d15b2719577457e.png?dim=96x0" alt="">
+    </div>
+  </div>
+  
+</body>
+</html>
+
+
+
+
+  <script>
+
+
+    let flag = 0;
+    function controller(x){
+        flag = flag + x;
+       
+        slideshow(flag);
+    }
+    
+    slideshow(flag);
+    function slideshow(num){
+        let slides = document.getElementsByClassName('slide');
+        if(num == slides.length){
+            flag = 0;
+            num = 0;
+    
+        }
+        if(num <0){
+            flag = slides.length-1;
+            num = slides.length-1;
+        }
+        for(let y of slides){
+            y.style.display = "none"
+        }
+         slides[num].style.display = "block";
+    
+    }
+    </script>
+    
